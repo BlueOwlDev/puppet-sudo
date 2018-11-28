@@ -119,7 +119,7 @@ class sudo::params {
       }
     }
     'FreeBSD': {
-      $package = 'security/sudo'
+      $package = 'sudo'
       $package_ldap = undef
       $package_ensure = 'present'
       $package_source = ''
