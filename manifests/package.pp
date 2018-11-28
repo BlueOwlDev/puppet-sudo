@@ -64,6 +64,13 @@ class sudo::package(
       }
     }
     'Darwin': {}
+    'FreeBSD': {
+      class { '::sudo::package::freebsd':
+        package        => $package,
+        package_source => $package_source,
+        package_ensure => $package_ensure,
+      }
+    }
     'Solaris': {
       class { '::sudo::package::solaris':
         package            => $package,
